@@ -1,0 +1,67 @@
+
+
+@mixin p-style($size,$weight){
+    font-size:$size ;
+    font-weight:$weight ;
+   
+}
+h2{
+    font-size: 28px ;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0px 25px 0px;
+}
+.parent{
+    box-shadow: 2px 10px 10px 5px  rgba(221, 214, 214, 0.574) ;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem;
+    span{
+        font-weight: bold;
+    }
+}
+.img{
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.des{
+    h4{
+        @include p-style(16px,700 )
+    }
+    p{
+        
+        @include p-style(14px,400 );
+    }
+}
+.info-div{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    .user-div{
+       h4{
+      
+            @include p-style(16px,700 )
+        
+       }
+       p{
+        
+            @include p-style(14px,400 );
+        
+        
+       }
+    }
+}
+.comment{
+    background-color: rgba(168, 191, 225, 0.64);
+    padding: 2px 8px;
+    border-radius: 5px;
+}

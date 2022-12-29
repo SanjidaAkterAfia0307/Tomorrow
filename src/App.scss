@@ -1,0 +1,11 @@
+$light-color:#FFFFFF;
+$dark-color:#000000;
+
+.light{
+  background-color:$light-color;
+  color: $dark-color;
+}
+.dark{
+  background-color: $dark-color;
+  color: $light-color;
+}
