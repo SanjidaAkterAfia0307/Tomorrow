@@ -22,16 +22,15 @@ const Login = () => {
                 const user = res.user;
                 console.log(user)
                 setError("")
-                // console.log(from)
+            
 
-                // console.log(user.email)
-                // setLoginEmail(user.email)
+                
                 toast("Log In Successful!")
                 navigate(from, { replace: true })
             }).catch(er => {
                 console.error(er)
                 setError(er.message)
-                // console.log(error)
+               
             })
     }
 
@@ -41,8 +40,8 @@ const Login = () => {
             .then(res => {
                 const user = res.user;
                 console.log(user)
-                // saveUser
-                // saveUser(user.displayName, user.email, user.photoURL, saveAs)
+                setError("")
+                navigate(from, { replace: true })
             })
             .catch(er => console.error(er))
     }

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import NoElement from '../Shared/NoElement';
 import SingleCompletedTask from './SingleCompletedTask';
 import TaskDetails from './TaskDetails';
 
@@ -20,6 +21,10 @@ const CompletedTask = () => {
         user?.email
     )
     console.log(CompletedTasks)
+
+    if (CompletedTasks.length === 0) {
+        return <NoElement></NoElement>
+    }
 
     return (
 

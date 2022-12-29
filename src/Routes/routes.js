@@ -6,12 +6,14 @@ import Register from "../Pages/Authentication/Register";
 import CompletedTask from "../Pages/CompletedTask/CompletedTask";
 import Home from "../Pages/Home/Home";
 import MyTask from "../Pages/MyTask/MyTask";
+import ErrorElement from "../Pages/Shared/ErrorElement";
 import PrivateRoute from "./PrivateRoute";
 
 export const router=createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorElement></ErrorElement>,
         children:[
             {
                 path:"/",
