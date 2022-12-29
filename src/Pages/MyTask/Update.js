@@ -34,7 +34,7 @@ const Update = ({ task, setMyTasksModal,refetch }) => {
             console.log(task)
 
       
-            fetch(`http://localhost:5001/update/${_id}`,{
+            fetch(`https://todo-app-server-phi.vercel.app/update/${_id}`,{
                 method:"PUT",
                 headers:{
                     "content-type":"application/json"

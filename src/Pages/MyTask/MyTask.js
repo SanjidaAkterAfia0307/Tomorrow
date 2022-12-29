@@ -11,7 +11,7 @@ const MyTask = () => {
 
     const { data: myTasks = [],refetch,isLoading } = useQuery({
         queryKey: ['myTasks'],
-        queryFn: () => fetch(`http://localhost:5001/task/${user.email}`)
+        queryFn: () => fetch(`https://todo-app-server-phi.vercel.app/task/${user.email}`)
             .then(res => res.json())
     })
 

@@ -6,7 +6,7 @@ const SignleTask = ({ task, setMyTasksModal,refetch }) => {
     console.log(task)
 
     const handleDelete=(id)=>{
-        fetch(`http://localhost:5001/delete/${_id}`,{
+        fetch(`https://todo-app-server-phi.vercel.app/delete/${_id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())
@@ -18,7 +18,7 @@ const SignleTask = ({ task, setMyTasksModal,refetch }) => {
         } )
     }
     const handleStatus=(id)=>{
-        fetch(`http://localhost:5001/status/${id}`,{
+        fetch(`https://todo-app-server-phi.vercel.app/status/${id}`,{
             method:"PUT",
              headers:{
                 "content-type":"application/json"

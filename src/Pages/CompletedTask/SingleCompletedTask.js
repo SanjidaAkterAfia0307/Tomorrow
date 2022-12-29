@@ -12,7 +12,7 @@ const SingleCompletedTask = ({ task, refetch,setSelectedTask }) => {
 
         const comment=e.target.comment.value
         console.log(comment)
-        fetch(`http://localhost:5001/comment/${_id}`, {
+        fetch(`https://todo-app-server-phi.vercel.app/comment/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -32,7 +32,7 @@ const SingleCompletedTask = ({ task, refetch,setSelectedTask }) => {
 
     }
     const handleDelete = (id) => {
-        fetch(`http://localhost:5001/delete/${_id}`, {
+        fetch(`https://todo-app-server-phi.vercel.app/delete/${_id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -44,7 +44,7 @@ const SingleCompletedTask = ({ task, refetch,setSelectedTask }) => {
             })
     }
     const handleStatus = (id) => {
-        fetch(`http://localhost:5001/status/${id}`, {
+        fetch(`https://todo-app-server-phi.vercel.app/status/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

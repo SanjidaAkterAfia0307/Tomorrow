@@ -10,7 +10,7 @@ const CompletedTask = () => {
     console.log(selectedtask)
     const { data: CompletedTasks = [], refetch, isLoading } = useQuery({
         queryKey: ['CompletedTasks'],
-        queryFn: () => fetch(`http://localhost:5001/completeTask/${user?.email}`)
+        queryFn: () => fetch(`https://todo-app-server-phi.vercel.app/completeTask/${user?.email}`)
             .then(res => res.json())
     })
 

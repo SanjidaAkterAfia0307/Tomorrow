@@ -30,7 +30,7 @@ const AddTask = () => {
             }
             console.log(task)
 
-            fetch("http://localhost:5001/task",{
+            fetch("https://todo-app-server-phi.vercel.app/task",{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"
